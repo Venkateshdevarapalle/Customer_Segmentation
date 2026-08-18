@@ -5,3 +5,5 @@ __pycache__/
 *.db
 .env
 .streamlit/secrets.toml
+data/uploads/*
+!data/uploads/.gitkeep
