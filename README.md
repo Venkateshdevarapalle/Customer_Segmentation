@@ -1,82 +1,91 @@
-# Customer Segmentation
+# CustomerIQ – AI-Powered Customer Intelligence Platform
 
-### AI-Powered Customer Intelligence
+**Transforming Customer Data into Meaningful Business Insights**
 
-Customer Segmentation is a customer intelligence application built with Python and Streamlit. It uses K-Means clustering to group customers based on their spending, purchase behavior, engagement, loyalty, churn risk and customer value.
+CustomerIQ is an AI-powered customer intelligence and segmentation platform built using Python, Streamlit, and Machine Learning. It analyzes customer purchasing behavior, identifies five behavioral customer segments using K-Means clustering, predicts the closest segment for new customers, and provides interactive analytics and AI-assisted business insights.
 
-The application helps users understand different types of customers, explore individual customer profiles, analyze business patterns, predict the closest segment for a new customer and get data-based insights through an AI Assistant.
+The platform brings customer segmentation, prediction, behavioral analysis, data exploration, and business intelligence together in a single application.
 
-Live Demo: https://customersegmentation05.streamlit.app/
+<p align="center">
 
-GitHub: https://github.com/Venkateshdevarapalle/Customer_Segmentation
+**Live Demo:** https://customersegmentation05.streamlit.app/
 
+**GitHub Repository:** https://github.com/Venkateshdevarapalle/Customer_Segmentation
+
+</p>
+
+---
+
+## Table of Contents
+
+1. [About the Project](#about-the-project)
+2. [Project Objectives](#project-objectives)
+3. [Key Features](#key-features)
+4. [Customer Segments](#customer-segments)
+5. [Machine Learning Methodology](#machine-learning-methodology)
+6. [Model Evaluation](#model-evaluation)
+7. [Customer Prediction](#customer-prediction)
+8. [Application Workflow](#application-workflow)
+9. [Technology Stack](#technology-stack)
+10. [Project Structure](#project-structure)
+11. [Installation and Setup](#installation-and-setup)
+12. [Application Pages](#application-pages)
+13. [AI Assistant](#ai-assistant)
+14. [Authentication and Security](#authentication-and-security)
+15. [Database and Data Persistence](#database-and-data-persistence)
+16. [Data Upload and Analysis](#data-upload-and-analysis)
+17. [Environment Configuration](#environment-configuration)
+18. [Important Notes](#important-notes)
+
+---
 
 ## About the Project
 
-Businesses collect a large amount of customer data, but it is not always easy to understand what that data means from a business point of view.
+Businesses collect large amounts of customer information, including purchasing history, spending patterns, engagement levels, loyalty, and customer value. However, understanding these records and converting them into meaningful business decisions can be challenging.
 
-Customer Segmentation converts the available customer data into five behavioral groups using K-Means clustering.
+CustomerIQ addresses this problem through machine-learning-based customer segmentation.
 
-The five groups identified in the project are:
+Using the K-Means clustering algorithm, the application identifies five behavioral customer groups based on seven numerical features.
 
-- At-Risk
-- Budget
-- Potential
-- Premium / High-Value
-- Regular
+The platform provides an integrated environment where users can:
 
-The application then provides dashboards, customer profiles, analytics, segment details, prediction, AI insights and model information in one place.
+- Understand overall customer behavior.
+- Identify high-value and at-risk customers.
+- Explore individual customer profiles.
+- Discover purchasing and engagement patterns.
+- Predict the closest customer segment for new customers.
+- Analyze customer segments through interactive dashboards.
+- Generate data-grounded business insights.
+- Interact with customer data using an AI Assistant.
+- Upload additional datasets for segmentation analysis.
 
+The objective is to make customer analytics more accessible and useful for data-driven business decisions.
 
-## What the Project Does
+## Project Objectives
 
-The project mainly focuses on the following:
+The primary objectives of CustomerIQ are:
 
-- Analyze customer data
-- Prepare the data for machine learning
-- Discover customer segments using K-Means
-- Understand the behavior of each segment
-- Explore individual customers
-- Predict the closest segment for a new customer
-- Analyze spending, engagement and customer value
-- Generate business-oriented insights
-- Answer questions about the dataset through an AI Assistant
-- Upload and analyze another customer dataset without changing the original dataset
+1. Analyze customer purchasing and behavioral data.
+2. Apply machine learning to discover meaningful customer groups.
+3. Understand customer spending, engagement, loyalty, and churn risk.
+4. Develop an interactive customer prediction interface.
+5. Provide business-oriented dashboards and analytics.
+6. Generate insights using verified dataset statistics.
+7. Enable natural-language interaction with customer information.
+8. Support the validation and analysis of additional customer datasets.
 
+---
 
-## Main Features
+## Key Features
 
+### 1. Customer Intelligence Dashboard
 
-### Customer Prediction
+Provides an overall understanding of the customer base through important business metrics and interactive visualizations.
 
-This is the main user-facing prediction feature of the project.
-
-A user enters:
-
-- Age
-- Income Level
-- Annual Purchase Amount / Spending
-- Average Order Value
-
-The application then estimates which of the five learned customer segments the new customer is closest to.
-
-The result shows:
-
-- Predicted segment
-- Confidence-style score
-- Explanation based on the distance from the learned K-Means centroids
-
-The displayed confidence is a similarity estimate based on cluster distance. It is not the probability of a supervised classification model.
-
-
-### Customer Intelligence
-
-Customer Intelligence provides an overall view of the customer base.
-
-The page shows important numbers such as:
+Key indicators include:
 
 - Total Customers
-- Customer Segments
+- Number of Customer Segments
 - Average Customer Value
 - Average Spending
 - Average Purchase Frequency
@@ -84,7 +93,7 @@ The page shows important numbers such as:
 - At-Risk Customers
 - Average Engagement Score
 
-It also includes:
+Additional visualizations include:
 
 - Customer Segment Distribution
 - Customer Value vs. Spending
@@ -92,40 +101,38 @@ It also includes:
 - AI Executive Summary
 - Recommended Business Priorities
 
-The purpose of this page is to give a quick business-level understanding of the complete customer base.
+### 2. Customer Segmentation
 
+Uses K-Means clustering to discover five behavioral customer groups.
 
-### Customer Segments
+Users can explore individual segments and understand their:
 
-This page explains the five groups discovered by the K-Means model.
-
-For each segment, the application displays:
-
-- Number of customers
-- Percentage of customers
+- Customer count
+- Customer percentage
 - Average spending
 - Purchase frequency
 - Customer value
 - Churn risk
-- Segment description
-
-A user can select a segment and view more details about that particular group.
-
-The segment detail section includes:
-
-- Customer statistics
-- Behavioral profile
+- Behavioral characteristics
 - Preferred categories
-- Customer value distribution
-- Business explanation
-- Recommended action
+- Recommended business actions
 
+### 3. Customer Prediction
 
-### Customer Explorer
+Allows users to estimate the closest customer segment using four input fields:
 
-Customer Explorer is used to look at individual customers.
+- Age
+- Income Level
+- Annual Purchase Amount / Spending
+- Average Order Value
 
-Users can search and select a customer to see details such as:
+The application compares the input with the learned customer segment centroids and displays the predicted segment along with a similarity-based confidence-style score.
+
+### 4. Customer Explorer
+
+Allows users to search and explore individual customer records.
+
+Available information includes:
 
 - Customer ID
 - Age
@@ -141,134 +148,97 @@ Users can search and select a customer to see details such as:
 - Loyalty Score
 - Churn Risk Score
 - Discovered Segment
-- Reference information where available
+- Reference information, where available
 
-This makes it easier to understand the behavior of a particular customer instead of looking only at overall statistics.
+### 5. Interactive Analytics
 
+Provides visual analysis of:
 
-### Analytics
-
-The Analytics page provides simple visualizations for understanding customer behavior.
-
-The main areas covered are:
-
-- Spending
+- Customer Spending
 - Customer Value
-- Engagement
+- Customer Engagement
 - Segment Performance
-- Category Behavior
+- Product Category Behavior
 - Customer Distribution
 
-The charts are kept simple so that both technical and non-technical users can understand them easily.
+The visualizations help users understand patterns without requiring advanced technical knowledge.
 
+### 6. AI Insights
 
-### AI Insights
+Converts verified customer statistics into business-friendly explanations.
 
-AI Insights converts verified customer and segment statistics into business-friendly explanations.
-
-It focuses on areas such as:
+It focuses on:
 
 - Customer behavior patterns
 - High-value customers
 - At-risk customers
 - Potential growth opportunities
-- Recommended business priorities
+- Business priorities
+- Segment-level observations
 
-The insights are based on the statistics calculated from the dataset and the segmentation model.
+### 7. AI Assistant
 
+Enables users to interact with CustomerIQ using natural-language questions.
 
-### AI Assistant
+It supports an offline mode and an optional OpenAI-powered mode.
 
-The AI Assistant allows users to ask questions about the Customer Segmentation project and its data using normal language.
+### 8. Model Insights
 
-For example:
-
-- How many customers are there?
-- What is the average spending?
-- What is the age of CUST_00045?
-- Tell me about CUST_00001.
-- Which segment has the highest customer value?
-- How many customers are in the Premium segment?
-- What is the average churn risk?
-- What features are used by the model?
-- What is the Silhouette Score?
-- How does K-Means create the segments?
-- How does Customer Prediction work?
-
-The assistant has two possible modes.
-
-Offline mode:
-
-The application can answer supported questions directly from the verified dataset and calculated project statistics. This mode does not require an external AI API.
-
-Optional LLM mode:
-
-If an OpenAI API key is configured, the assistant can use an external language model to provide more natural responses. The verified Customer Segmentation statistics are provided as context so that the model can answer based on the project data instead of making up statistics.
-
-The AI Assistant is designed specifically around this project and its customer data.
-
-
-### Model Insights
-
-Model Insights provides the technical details of the K-Means model.
-
-It includes:
+Displays technical information about the machine-learning model, including:
 
 - Algorithm
 - Number of Clusters
-- Features Used
-- Silhouette Score
-- Davies-Bouldin Index
-- Calinski-Harabasz Score
+- Input Features
+- Model Evaluation Metrics
 - Dataset Size
 - Model Status
-- Evaluation Metrics
 - Cluster Profiles
 
-This page is mainly useful for understanding how the machine-learning model was built and how well the discovered clusters are separated.
+### 9. Data Upload
 
+Allows users to upload additional CSV datasets, validate their structure, and analyze them using the existing trained K-Means model.
 
-### Data Upload
+Uploaded records remain separate from the original finalized dataset.
 
-The Data Upload page allows another CSV file to be uploaded for validation and analysis.
+---
 
-The uploaded file is kept separate from the finalized dataset.
+## Customer Segments
 
-The application checks:
+CustomerIQ identifies five behavioral customer groups.
 
-- Number of rows
-- Number of columns
-- Missing values
-- Required model features
-- Dataset preview
+| Segment | Description |
+|---|---|
+| At-Risk | Customers exhibiting higher churn risk and requiring retention attention. |
+| Budget | Customers generally associated with lower spending behavior. |
+| Potential | Customers who may represent opportunities for increased engagement and value. |
+| Premium / High-Value | Customers associated with stronger customer value and spending. |
+| Regular | Customers demonstrating relatively consistent purchasing behavior. |
 
-If the required model fields are available, the existing trained K-Means model can be used to assign the uploaded records to the existing five segments.
+Each segment is analyzed using its customer distribution, spending, purchase frequency, engagement, loyalty, and customer value characteristics.
 
-The page can then show:
+The application also provides segment-specific explanations and recommended business actions.
 
-- Segment counts
-- Segment percentages
-- Segment distribution
-- Segment profiles
+---
 
-The uploaded data does not automatically replace or merge with the original finalized dataset.
+## Machine Learning Methodology
 
+CustomerIQ uses **K-Means Clustering**, an unsupervised machine-learning algorithm.
 
-## Machine Learning
+K-Means groups customers according to similarities in their selected behavioral features.
 
-The project uses K-Means clustering.
+### Model Configuration
 
-K-Means is an unsupervised machine-learning algorithm. It groups customers based on similarities in their selected behavioral features.
-
-The final model uses:
-
-- 5 clusters
-- 7 input features
-
+| Parameter | Configuration |
+|---|---|
+| Algorithm | K-Means |
+| Number of Clusters | 5 |
+| Input Features | 7 |
+| Dataset Size | 11,780 customers |
+| Feature Preparation | Standardization and Feature Weighting |
 
 ### Features Used
 
-The seven model features are:
+The final segmentation model uses seven numerical features:
 
 1. Purchase Amount
 2. Total Purchases
@@ -280,29 +250,22 @@ The seven model features are:
 
 Customer IDs and reference labels are not used as clustering inputs.
 
+### Data Preprocessing
 
-## Data Processing
+The model preparation process involves:
 
-Before sending the data to K-Means, the selected numerical features are prepared for the model.
+1. Selecting the required numerical features.
+2. Handling missing values where required.
+3. Standardizing numerical features.
+4. Applying predefined feature weights.
+5. Performing K-Means clustering.
+6. Evaluating the resulting clusters.
 
-The main steps are:
+Standardization ensures that features with different numerical ranges can contribute meaningfully to the clustering process.
 
-1. Select the required model features
-2. Handle missing values where required
-3. Standardize the numerical features
-4. Apply the defined feature weights
-5. Run K-Means clustering
+### Feature Weighting
 
-Standardization is important because the features have different ranges.
-
-For example, Purchase Amount can have values in thousands, while Engagement Score is measured on a 0–100 scale.
-
-Without standardization, a feature with larger numerical values could have too much influence on the clustering result.
-
-
-## Feature Weights
-
-The final model uses the following weights:
+The finalized model applies the following feature weights:
 
 | Feature | Weight |
 |---|---:|
@@ -314,184 +277,185 @@ The final model uses the following weights:
 | Churn Risk Score | 1.00 |
 | Customer Value Score | 1.50 |
 
-The weights were introduced to reduce the influence of the overlapping Average Order Value feature and give slightly more importance to Customer Value Score.
+Feature weighting was introduced to reduce the influence of the overlapping Average Order Value signal and give Customer Value Score slightly more influence.
 
-All seven original features are still retained in the model.
+All seven original model features are retained.
 
+---
 
 ## Model Evaluation
 
-Since K-Means is an unsupervised learning algorithm, normal classification accuracy is not used to evaluate the segmentation model.
+Since K-Means is an unsupervised learning algorithm, classification accuracy is not an appropriate evaluation metric for this model.
 
-Instead, the project uses clustering evaluation metrics.
+CustomerIQ uses three clustering evaluation metrics.
 
 ### Silhouette Score
 
-The Silhouette Score indicates how well customers fit within their assigned cluster compared with other clusters.
+Measures how closely customers fit within their assigned clusters compared with other clusters.
 
-A higher value generally indicates better-separated clusters.
+A higher score generally indicates better-separated clusters.
 
 ### Davies-Bouldin Index
 
-The Davies-Bouldin Index measures the similarity between the different clusters.
+Measures the similarity between clusters.
 
 A lower value generally indicates better cluster separation.
 
 ### Calinski-Harabasz Score
 
-The Calinski-Harabasz Score compares the separation between clusters with the variation within each cluster.
+Measures the relationship between between-cluster separation and within-cluster variation.
 
 A higher value generally indicates better-defined clusters.
 
-### Current Model Results
+### Finalized Model Results
 
-The current model results on the finalized dataset are:
+The following results were obtained using the finalized 11,780-row dataset.
 
-| Metric | Result |
+| Evaluation Metric | Result |
 |---|---:|
 | Algorithm | K-Means |
 | Number of Clusters | 5 |
-| Features | 7 |
+| Input Features | 7 |
 | Silhouette Score | 0.2000 |
 | Davies-Bouldin Index | 1.4409 |
 | Calinski-Harabasz Score | 3385.4 |
-| Dataset Size | 11,780 customers |
+| Dataset Size | 11,780 |
 
-These values describe clustering quality. They should not be referred to as classification accuracy.
+**Note:** These values represent clustering quality and cluster separation. They should not be interpreted as classification accuracy.
 
+---
 
-## How Customer Prediction Works
+## Customer Prediction
 
-The prediction page asks for four values:
+Customer Prediction provides an interface for estimating the closest learned customer segment for a new customer.
 
-- Age
-- Income Level
-- Annual Purchase Amount / Spending
-- Average Order Value
+### Input Parameters
 
-The application prepares these values and compares the new customer's characteristics with the learned behavioral groups.
+The prediction interface accepts four fields:
 
-The basic flow is:
+1. Age
+2. Income Level
+3. Annual Purchase Amount / Spending
+4. Average Order Value
 
+Income levels are displayed using lakh-based ranges for readability.
+
+### Prediction Process
+
+The application prepares the entered values and compares the resulting customer representation with the learned K-Means centroids.
+
+The prediction process can be summarized as:
+
+```text
 New Customer
+     |
+     v
+Enter Four Details
+     |
+     v
+Prepare Input Features
+     |
+     v
+Standardize Input Values
+     |
+     v
+Compare with Learned Centroids
+     |
+     v
+Identify Closest Segment
+     |
+     v
+Display Prediction Result
+```
 
-↓
+The result includes:
 
-Enter four details
+- Predicted customer segment
+- Confidence-style similarity score
+- Explanation based on centroid distance
 
-↓
+**Important:** The prediction interface is a similarity-based estimation feature. Its four input fields are not the same as the seven features used to train the original segmentation model. The displayed score is not a supervised classification probability.
 
-Prepare the input
+---
 
-↓
+## Application Workflow
 
-Standardize the values
+The overall CustomerIQ workflow is:
 
-↓
-
-Compare with learned K-Means centroids
-
-↓
-
-Find the closest segment
-
-↓
-
-Display the predicted segment
-
-
-The prediction is therefore based on similarity to the existing customer groups.
-
-It is important to note that the prediction page is a user-friendly estimation feature. The main K-Means segmentation model itself was trained using seven behavioral features.
-
-
-## Application Flow
-
-The overall working of the project can be understood as:
-
+```text
 Customer Dataset
-
-↓
-
+       |
+       v
 Data Validation
-
-↓
-
+       |
+       v
 Data Preprocessing
-
-↓
-
-Feature Preparation
-
-↓
-
+       |
+       v
+Feature Selection
+       |
+       v
 Feature Standardization
-
-↓
-
+       |
+       v
+Feature Weighting
+       |
+       v
 K-Means Clustering
-
-↓
-
+       |
+       v
 Five Customer Segments
-
-↓
-
-Customer Intelligence & Analytics
-
-↓
-
-Customer Explorer / Prediction / AI Insights
-
-↓
-
+       |
+       v
+Customer Intelligence
+       |
+       v
+Analytics and Customer Explorer
+       |
+       v
+Prediction and AI Insights
+       |
+       v
 AI Assistant
+       |
+       v
+Business Understanding
+```
 
-↓
+---
 
-Business Understanding and Decisions
+## Technology Stack
 
+The project uses Python-based data science, machine learning, visualization, and application development technologies.
 
-## Technologies Used
+| Technology | Purpose |
+|---|---|
+| Python | Core programming language and application logic |
+| Streamlit | Interactive web application and dashboards |
+| Pandas | Data processing and manipulation |
+| NumPy | Numerical operations |
+| Scikit-learn | Machine learning and clustering evaluation |
+| Plotly | Interactive charts and visualizations |
+| SQLite | Local database and persistence |
+| PostgreSQL | Optional production database |
+| OpenAI API | Optional LLM-powered AI Assistant |
+| Git and GitHub | Version control and source-code management |
 
 ### Python
 
-Python is used throughout the project for data processing, machine learning, application logic and AI-related functionality.
-
-It was selected because it provides a strong ecosystem for data science and machine learning and allows the complete project to be developed using one main programming language.
-
+Used for application development, data processing, machine learning, and backend logic.
 
 ### Streamlit
 
-Streamlit is used to build the web application.
+Used to create the interactive multi-page application, dashboards, forms, charts, and file-upload interfaces.
 
-It provides the UI components, multi-page navigation, forms, tables, charts, file upload functionality and deployment support required by the project.
+### Pandas and NumPy
 
-Using Streamlit also allows the data-science and application layers to stay within the Python ecosystem.
-
-
-### Pandas
-
-Pandas is used for:
-
-- Reading CSV files
-- Data cleaning
-- Data filtering
-- Data transformation
-- Grouping and aggregation
-- Customer analysis
-
-
-### NumPy
-
-NumPy is used for numerical operations and preparing data for the machine-learning pipeline.
-
+Used for data cleaning, transformation, aggregation, numerical processing, and feature preparation.
 
 ### Scikit-learn
 
-Scikit-learn is used for the machine-learning part of the project.
-
-It provides:
+Provides the machine-learning components, including:
 
 - KMeans
 - StandardScaler
@@ -499,24 +463,19 @@ It provides:
 - Davies-Bouldin Index
 - Calinski-Harabasz Score
 
-
 ### Plotly
 
-Plotly is used to create the interactive charts and graphs used throughout the application.
+Used to create interactive charts and visualizations for customer analytics.
 
+### SQLite and PostgreSQL
 
-### SQLite
+Used for storing model runs, prediction logs, and uploaded dataset metadata.
 
-SQLite is used for lightweight local data persistence.
+### OpenAI API
 
-The application can store information such as:
+Provides optional language-model functionality for the AI Assistant.
 
-- Model training and evaluation runs
-- Prediction logs
-- Uploaded dataset metadata
-
-The SQLite database is created during runtime and is not committed to GitHub.
-
+---
 
 ## Project Structure
 
@@ -533,7 +492,8 @@ Customer_Segmentation/
 │   └── config.toml
 │
 ├── data/
-│   └── Customer_Segmentation_Dataset.csv
+│   ├── Customer_Segmentation_Dataset.csv
+│   └── uploads/
 │
 ├── pages/
 │   ├── 1_Customer_Segments.py
@@ -551,3 +511,285 @@ Customer_Segmentation/
     ├── database.py
     ├── ai_service.py
     └── ui.py
+```
+
+The application also creates its SQLite database at runtime when local persistence is used.
+
+---
+
+## Installation and Setup
+
+Follow these steps to run CustomerIQ locally.
+
+### Prerequisites
+
+- Python 3.10 or later (use a version compatible with the installed dependencies).
+- Git
+- pip package manager
+
+### Step 1: Clone the Repository
+
+```bash
+git clone https://github.com/Venkateshdevarapalle/Customer_Segmentation.git
+```
+
+### Step 2: Navigate to the Project Directory
+
+```bash
+cd Customer_Segmentation
+```
+
+### Step 3: Create a Virtual Environment
+
+**Windows:**
+
+```bash
+python -m venv .venv
+```
+
+Activate it:
+
+```bash
+.venv\Scripts\activate
+```
+
+**macOS / Linux:**
+
+```bash
+python3 -m venv .venv
+```
+
+Activate it:
+
+```bash
+source .venv/bin/activate
+```
+
+### Step 4: Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Step 5: Run the Application
+
+```bash
+streamlit run app.py
+```
+
+### Step 6: Open the Application
+
+Visit:
+
+```text
+http://localhost:8501
+```
+
+The CustomerIQ application will open in your browser.
+
+---
+
+## Application Pages
+
+CustomerIQ contains nine main application pages.
+
+| No. | Page | Purpose |
+|---:|---|---|
+| 1 | Customer Prediction | Estimate the closest segment for new customers. |
+| 2 | Customer Intelligence | View overall customer intelligence and business metrics. |
+| 3 | Customer Segments | Explore the five discovered behavioral groups. |
+| 4 | Customer Explorer | Search and inspect individual customer profiles. |
+| 5 | Analytics | Visualize customer spending and behavioral patterns. |
+| 6 | AI Insights | Understand data-grounded business insights. |
+| 7 | AI Assistant | Ask natural-language questions about the project and dataset. |
+| 8 | Model Insights | Review model configuration and evaluation metrics. |
+| 9 | Data Upload | Validate and analyze additional customer datasets. |
+
+---
+
+## AI Assistant
+
+The CustomerIQ AI Assistant allows users to ask questions about customer information, machine-learning results, and business statistics using natural language.
+
+### Example Questions
+
+- How many customers are there?
+- What is the average spending?
+- What is the average customer value?
+- Tell me about CUST_00001.
+- What is the age of CUST_00045?
+- Which segment has the highest customer value?
+- How many customers are in the Premium segment?
+- What is the average churn risk?
+- Which features are used by the model?
+- What is the Silhouette Score?
+- How does K-Means create customer segments?
+- How does Customer Prediction work?
+
+### Operating Modes
+
+**1. Offline Mode**
+
+- Works without an external AI API.
+- Provides deterministic answers to supported questions.
+- Uses verified dataset information and calculated project statistics.
+- Does not require an OpenAI API key.
+
+**2. Optional LLM Mode**
+
+When an OpenAI API key is configured, the application can use the OpenAI Responses API to generate more natural-language answers.
+
+Only verified CustomerIQ statistics are supplied as context, with instructions to avoid inventing numerical information.
+
+The project remains runnable without the API key.
+
+---
+
+## Authentication and Security
+
+CustomerIQ includes a login system to control access to the application.
+
+The authentication implementation:
+
+- Uses SHA-256 password hashing instead of keeping the password as plaintext in authentication logic.
+- Supports environment-variable overrides for deployment.
+- Provides demo credentials for testing.
+
+### Demo Login Credentials
+
+```text
+Email: admin123@gmail.com
+Password: admin123
+```
+
+**Security recommendation:** These are demo credentials only. Configure a unique password hash and appropriate secrets for any public or production deployment. Never expose private credentials or API keys in the repository.
+
+---
+
+## Database and Data Persistence
+
+CustomerIQ uses SQLite for local database persistence.
+
+The database is automatically created at runtime:
+
+```text
+data/customeriq.db
+```
+
+### Stored Information
+
+- Model training and evaluation runs
+- Customer prediction logs
+- Uploaded dataset metadata
+
+The SQLite database is excluded from Git using `.gitignore` to prevent accidental commits of runtime data.
+
+### Optional PostgreSQL Configuration
+
+The application also supports PostgreSQL when the database connection variable is configured.
+
+Set:
+
+```text
+DATABASE_URL=postgresql://username:password@host:5432/customeriq
+```
+
+The project includes the PostgreSQL driver and uses the configured persistence layer when this variable is available.
+
+---
+
+## Data Upload and Analysis
+
+The Data Upload page allows users to analyze additional customer datasets without modifying the original finalized dataset.
+
+### Validation
+
+Uploaded CSV files are checked for:
+
+- Number of rows
+- Number of columns
+- Missing values
+- Required model features
+- Dataset preview
+
+### Segmentation
+
+When the required seven model features are available, the application uses the already-trained finalized K-Means model to assign uploaded records to the existing five customer segments.
+
+### Analysis Results
+
+The application displays:
+
+- Segment counts
+- Segment percentages
+- Segment distribution chart
+- Segment profile table
+- Dataset information
+
+Uploaded dataset metadata is also stored in the database.
+
+**Important:** Uploaded datasets are analyzed separately. They do not automatically replace or merge with the original finalized dataset, and the upload process does not imply that the model is retrained.
+
+---
+
+## Environment Configuration
+
+CustomerIQ supports optional environment variables for deployment and additional functionality.
+
+### Available Variables
+
+| Variable | Purpose |
+|---|---|
+| `CUSTOMERIQ_ADMIN_EMAIL` | Overrides the demo administrator email. |
+| `CUSTOMERIQ_ADMIN_PASSWORD_HASH` | Sets the administrator password hash. |
+| `DATABASE_URL` | Configures an optional PostgreSQL database. |
+| `OPENAI_API_KEY` | Enables optional OpenAI-powered responses. |
+| `OPENAI_MODEL` | Specifies the OpenAI model to use. |
+
+### OpenAI Configuration
+
+For optional LLM functionality:
+
+```text
+OPENAI_API_KEY=your_api_key
+OPENAI_MODEL=gpt-5.6
+```
+
+Without an API key, the application continues to operate in offline mode.
+
+Refer to `.env.example` for the project's environment configuration template.
+
+Never commit actual API keys, database passwords, or private credentials.
+
+---
+
+## Important Notes
+
+- The finalized segmentation model uses five K-Means clusters.
+- Seven original behavioral features are used for clustering.
+- Customer Prediction uses a separate four-field input interface.
+- The prediction confidence-style score represents centroid similarity, not classification probability.
+- Clustering metrics are not classification accuracy.
+- Uploaded datasets are processed separately from the original dataset.
+- The AI Assistant supports offline operation.
+- OpenAI integration is optional.
+- Runtime databases and uploaded customer files should not be committed to GitHub.
+- The project does not include a Campaign Generator or Docker configuration.
+
+---
+
+## Author
+
+**Devarapalle Venkatesh**
+
+Computer Science and Data Science
+
+GitHub: https://github.com/Venkateshdevarapalle
+
+---
+
+## Project
+
+**CustomerIQ – AI-Powered Customer Intelligence Platform**
+
+*Turning customer data into meaningful insights for smarter business decisions.*
