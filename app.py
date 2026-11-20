@@ -1,7 +1,7 @@
 import streamlit as st
 import plotly.express as px
 import plotly.graph_objects as go
-
+import numpy as np
 from services.auth import require_login
 from services.ui import setup_page, sidebar, kpi_grid
 from services.customer_engine import get_model_data, segment_summary, SEGMENT_ORDER, SEGMENT_COLORS_HEX
